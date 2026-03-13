@@ -37,7 +37,6 @@ The dashboard includes:
 - HTML
 - CSS
 - JavaScript
-- Chart.js
 
 ## Author
 
