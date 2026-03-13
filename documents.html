@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Intern Document Verification</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1 class="title">Intern Document Verification</h1>
+
+<div class="upload-container">
+
+<h2>Upload Document</h2>
+
+<div class="form-group">
+<label>Intern Name</label>
+<input type="text" id="internName">
+</div>
+
+<div class="form-group">
+<label>Intern ID</label>
+<input type="text" id="internId">
+</div>
+
+<div class="form-group">
+
+<label>Document Type</label>
+
+<select id="docType">
+
+<option>Identity Proof (Aadhar / Voter ID / PAN)</option>
+<option>Address Proof</option>
+<option>College ID Card</option>
+<option>Latest Marksheet</option>
+<option>Internship Offer Letter</option>
+<option>PAN Card</option>
+<option>Passport Photos</option>
+<option>Emergency Contact Details</option>
+<option>Updated Resume</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Upload File</label>
+<input type="file" id="fileUpload">
+
+</div>
+
+<button class="upload-btn" onclick="uploadDocument()">Upload Document</button>
+
+</div>
+
+<div class="controls">
+
+<input type="text" id="searchInput" placeholder="Search Intern..." onkeyup="displayDocuments()">
+
+<select id="filterStatus" onchange="displayDocuments()">
+
+<option value="All">All</option>
+<option value="Pending">Pending</option>
+<option value="Accepted">Accepted</option>
+<option value="Rejected">Rejected</option>
+
+</select>
+
+</div>
+
+<h2 class="section-title">Uploaded Documents</h2>
+
+<div id="documentList" class="card-container"></div>
+
+<h2 class="section-title">Verification Analytics</h2>
+
+<div class="charts-container">
+
+<div class="chart-box">
+<canvas id="progressChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="internChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="dailyChart"></canvas>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
